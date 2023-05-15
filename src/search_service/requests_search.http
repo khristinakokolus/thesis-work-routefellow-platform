@@ -1,0 +1,16 @@
+###
+POST http://localhost:5002/search_api/search
+Content-Type: application/json
+
+{
+  "departure_destination": "Berlin",
+  "other_destinations": "Berlin,Paris,Barcelona",
+  "days_in_cities": "4,5,4",
+  "date_from": "01.07.2023",
+  "date_to": "10.07.2023",
+  "price_max": "500",
+  "stopover_during_transportation": "1",
+  "adult_number": "1",
+  "search_buses_flights": "both",
+  "airlines_to_exclude": ""
+}

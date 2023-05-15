@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>RouteFellow: Home</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+   </head>
+   <body>
+<header class="site-header">
+      <div class="header-wp site-header-wp">
+        <div>
+          <a href="#" class="site-name">RouteFellow</a>
+        </div>
+        <div>
+          <nav class="nav">
+            <ul class="nav-wp">
+              <li class="nav-item"><a href="#">Home</a></li>
+              <li class="nav-item"><a href="#about">About</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-header-end">
+            <a href="{{url_for('sign_in')}}">Sign In</a>
+        </div>
+      </div>
+    </header>
+   <main>
+       <div class="home-banner">
+          <div class="home-text">
+            <h1 class="home-text1">
+              <span>Welcome to RouteFellow!</span>
+              <br />
+            </h1>
+          </div>
+          <div class="home-text2">
+            To continue, click search button, sign up and find a journey path of your dream!
+          </div>
+          <div class="home-text3">
+            <span>
+              Here you can find your optimal travel plan minimizing price and travel time</span>
+          <div class="search">
+            <a style="color:black; position: center;" href="/sign_in">Search</a>
+        </div>
+          </div>
+        </div>
+       <div class="about">
+           <section id="about">
+               <b><h1 style="color:white; padding-left: 450px; font-size: 35px;">ABOUT US</h1><b>
+       <h3 style="color:white; padding-top: 25px;">RouteFellow is an application that will help you in trip planning.
+               It considers two important things as price and time on transportation.
+               <br>
+               Using this tool, you can save time on trip planning and take time only to consider search criteria.
+            As an output you will get possible
+           <br>
+            flight and bus tickets to get to your destinations.
+                <br>
+               <br>
+               You should consider such main search requirements as:
+       </h3>
+               <div class="parent">
+       <ul>
+          <b><li>City from where you want to depart</li>
+          <li>Cities that you want to visit</li>
+          <li>Amount of days you want to spend in each city</li>
+           <li>Date of departure</li>
+            <li>Date of arrival back to departure city</li>
+           <li>Maximum price of the transportation in your trip</li>
+           <li>Maximum amount of transfer changes during transportation between two cities; 0 - transportations with no stops, 1 - allowed tickets with 1 transfer change, etc.</li>
+           <li>Number of adults that want to travel</li>
+           <li>Transport options you want to travel with</li></b>
+        </ul>
+               </div>
+        </section>
+       </div>
+       <div class="contain" style="padding-left: 10px; overflow: hidden; display: flex;">
+       <div class="category">
+           <img src="../static/img/itinerary.png" style="padding-top: 100px; padding-right: 200px; max-width: 70%; max-height: 70%;"/>
+           <h3 style="color:grey; padding-right: 200px; font-size: 25px;">Route</h3>
+           <p style="color:black; padding-right: 200px;">Find optimal trip plan through multiple points</p>
+        </div>
+        <div class="category">
+           <img src="../static/img/travel.png" style="padding-top: 100px; padding-left: 95px; padding-right: 95px; max-width: 70%; max-height: 70%;" />
+            <h3 style="color:grey; padding-left: 95px; padding-right: 95px; font-size: 25px;">Transport</h3>
+            <p style="color:black; padding-left: 95px; padding-right: 95px;">Consider in search both flights and buses</p>
+        </div>
+        <div class="category">
+           <img src="../static/img/time-is-money.png" style="padding-top: 100px; padding-left: 150px; max-width: 65%; max-height: 65%;" />
+            <h3 style="color:grey; padding-left: 150px; font-size: 25px;">Time and money</h3>
+            <p style="color:black; padding-left: 150px;">Save money and time on planning and transportation</p>
+        </div>
+           </div>
+      </main>
+   <footer class="home-footer">
+          <span>
+            © 2023 RouteFellow, All Rights Reserved.
+          </span>
+        </footer>
+   </body>
+</html>

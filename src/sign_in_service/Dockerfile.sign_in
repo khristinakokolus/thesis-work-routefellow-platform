@@ -1,0 +1,18 @@
+FROM --platform=linux/x86-64 python:3.8-alpine
+
+COPY ./requirements.txt /app/requirements.txt
+
+WORKDIR /app
+
+RUN apk add --no-cache postgresql-libs
+
+RUN apk add --no-cache --virtual .build-deps gcc musl-dev postgresql-dev
+
+RUN python3 -m pip install -r requirements.txt --no-cache-dir
+
+RUN apk --purge del .build-deps
+
+COPY . /app
+
+EXPOSE 5001
+CMD ["python" , "main.py" ]

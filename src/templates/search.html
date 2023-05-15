@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>RouteFellow: Search</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+   </head>
+
+   <body>
+   <div class="search-fm">
+      <div class="box">
+        <div class="padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <h1><a style="color:white; font-size: 45px;" href="" rel="dofollow">Search for optimal trip plan with RouteFellow</a></h1>
+        </div>
+       <div>
+           <div>
+          <div class="form-back">
+            <div class="padding-horizontal--48">
+              <span class="padding-bottom--15">Fill out the form with trip details</span>
+                <span class="padding-bottom--15" style="font-size: 15px; padding-bottom: 40px;">Changed your mind? <a style="color: blue;" href="{{url_for('sign_out')}}">Sign Out</a> </span>
+              <span style="font-size: 15px; padding-bottom: 10px;">Fields with * are compulsory </span>
+              <form name="form" method="POST" action="">
+                  <div class="field padding-bottom--24">
+                  <label for="departure_destination">City from which you want to depart and will come back. *</label>
+                      <label style="color:#556B2F;">Example: Warsaw (without any special characters)</label>
+                  <input type="departure_destination" name="departure_destination">
+                </div>
+                <div class="field padding-bottom--24">
+                  <label for="other_destinations">Cities you want to visit separated by coma. *</label>
+                      <label style="color:#556B2F;">Example: Berlin,Rome,Paris</label>
+                  <input type="other_destinations" name="other_destinations">
+                </div>
+                <div class="field padding-bottom--24">
+                  <label for="days_in_cities">Amount of days you want to spend in each city. *</label>
+                      <label style="color:#556B2F;">Example: 4,3,2 (NOTE: please, ENTER days for each city separately in the same order!)</label>
+                  <input type="days_in_cities" name="days_in_cities">
+                </div>
+                  <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="date_from">Date of the departure from departure city. *</label>
+                      <br>
+                      <label style="color:#556B2F;">Example: 01.07.2023</label>
+                  </div>
+                  <input type="date_from" name="date_from">
+                </div>
+                  <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="date_to">Date of arrival back to departure city. *</label>
+                      <br>
+                      <label style="color:#556B2F;">Example: 10.07.2023</label>
+                      <br>
+                      <label style="color:#556B2F;">NOTE: this date is equal to the sum of the first day of the trip plus all days entered in third field</label>
+                      <br>
+                      <label style="color:#556B2F;">Using examples it is 1 + 4 + 3 + 2 = 10</label>
+                  </div>
+                  <input type="date_to" name="date_to">
+                </div>
+                  <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="price_max">Maximum price of the total trip. *</label>
+                      <br>
+                      <label style="color:#556B2F;">Example: 300 (NOTE: in Euro)</label>
+                  </div>
+                  <input type="price_max" name="price_max">
+                </div>
+                <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="stopover_during_transportation">Maximum transfer change amount during transportation from one city to another. *</label>
+                      <br>
+                      <label style="color:#556B2F;">Example: 1</label>
+                      <br>
+                      <label style="color:#556B2F;">This field means what is the maximum allowable value of transfer change between two cities</label>
+                      <br>
+                      <label style="color:#556B2F;">0 - all transportations with no stops on the way</label>
+                      <br>
+                      <label style="color:#556B2F;">1 - allowed tickets with max 1 transfer change in transportation between two cities.</label>
+                    <br>
+                      <label style="color:#556B2F;">2 - allowed tickets with max 2 transfer changes in transportation between two cities, etc.</label>
+                  </div>
+                  <input type="stopover_during_transportation" name="stopover_during_transportation">
+                </div>
+                  <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="adult_number">Number of adults that want to travel. *</label>
+                      <br>
+                      <label style="color:#556B2F;">Example: 2</label>
+                  </div>
+                  <input type="adult_number" name="adult_number">
+                </div>
+                  <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="search_buses_flights">Transport options you want travel with. *</label>
+                      <br>
+                      <label style="color:#556B2F;">Possible options: bus, flight or both.</label>
+                  </div>
+                  <input type="search_buses_flights" name="search_buses_flights">
+                </div>
+                  <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="airlines_to_exclude">Airlines to exclude in search separated by coma.</label>
+                      <br>
+                      <label style="color:#556B2F;">Example: Ryanair,Air France.</label>
+                  </div>
+                  <input type="airlines_to_exclude" name="airlines_to_exclude">
+                </div>
+                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
+                </div>
+                    <div class="field padding-bottom--24">
+                        <script>
+                    function loading() {
+                    alert('Search started working, please, wait a bit while loading! Click OK.');
+                    }
+                    </script>
+                  <input type="submit" name="continue" id="submitForm" onclick="loading();" value="Find optimal paths">
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+</body>
+
+</html>

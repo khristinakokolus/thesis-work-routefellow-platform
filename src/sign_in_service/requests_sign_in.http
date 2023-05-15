@@ -1,0 +1,18 @@
+###
+POST http://localhost:5002/users_api/sign_in
+Content-Type: application/json
+
+{
+  "email": "test_user@gmail.com",
+  "password": "Password12@"
+}
+
+
+
+###
+POST http://localhost:5002/users_api/sign_out
+Content-Type: application/json
+
+{
+  "email": "test_user@gmail.com"
+}

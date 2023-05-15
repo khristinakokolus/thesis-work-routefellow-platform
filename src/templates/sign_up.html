@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>RouteFellow: Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/sign_up.css') }}">
+</head>
+
+<body>
+  <div>
+      <div class="box">
+        <div class="padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <h1><a style="color:white; font-size: 45px;" href="" rel="dofollow">RouteFellow</a></h1>
+        </div>
+        <div>
+          <div class="form-back">
+            <div class="padding-horizontal--48">
+              <span class="padding-bottom--15">Create new account</span>
+              <form method="POST" action="">
+                <div class="field padding-bottom--24">
+                  <label for="username">Username</label>
+                  <input type="username" name="username">
+                </div>
+                <div class="field padding-bottom--24">
+                  <label for="email">Email</label>
+                  <input type="email" name="email">
+                </div>
+                <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="password">Password</label>
+                  </div>
+                  <input type="password" name="password">
+                </div>
+                <div class="padding-bottom--24">
+                  <p>Password should contain upper and lower case letters, numbers and at least one special character - min length 6 symbols.</p>
+                </div>
+                <div class="field padding-bottom--24">
+                  <input type="submit" name="continue" value="Continue">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
